@@ -1,0 +1,6 @@
+@CleanApiExample_HostAddress = http://localhost:5266
+
+GET {{CleanApiExample_HostAddress}}/todo
+Accept: application/json
+
+###
