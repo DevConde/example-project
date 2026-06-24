@@ -1,0 +1,26 @@
+info:
+  name: Update todo
+  type: http
+  seq: 5
+
+http:
+  method: PUT
+  url: http://localhost:5266/todo
+  body:
+    type: json
+    data: |-
+      {
+        "item": {
+          "id": 1,
+          "title": "My new title",
+          "description": "I must fill that information",
+          "isCompleted": false
+        }
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

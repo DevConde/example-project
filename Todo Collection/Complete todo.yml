@@ -1,0 +1,15 @@
+info:
+  name: Complete todo
+  type: http
+  seq: 7
+
+http:
+  method: PATCH
+  url: http://localhost:5266/todo/2/complete
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
