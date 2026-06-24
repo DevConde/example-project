@@ -1,0 +1,210 @@
+{
+  "info": {
+    "name": "Todo Collection",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create todo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"item\": {\n    \"title\": \"{{$randomCatchPhraseNoun}}\",\n    \"description\": \"{{$randomCatchPhrase}}\",\n    \"isCompleted\": {{$randomBoolean}}\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Get all todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Get todo by id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo/2",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo",
+            "2"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Get completed todos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo/completed",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo",
+            "completed"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Update todo",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"item\": {\n    \"id\": 1,\n    \"title\": \"My new title\",\n    \"description\": \"I must fill that information\",\n    \"isCompleted\": false\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Delete todo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo/1",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo",
+            "1"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Complete todo",
+      "request": {
+        "method": "PATCH",
+        "header": [],
+        "auth": {
+          "type": "noauth"
+        },
+        "description": "",
+        "url": {
+          "raw": "http://localhost:5266/todo/2/complete",
+          "protocol": "http",
+          "host": [
+            "localhost:5266"
+          ],
+          "path": [
+            "todo",
+            "2",
+            "complete"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "$randomCatchPhraseNoun",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "$randomCatchPhrase",
+      "value": "",
+      "type": "default"
+    },
+    {
+      "key": "$randomBoolean",
+      "value": "",
+      "type": "default"
+    }
+  ]
+}
